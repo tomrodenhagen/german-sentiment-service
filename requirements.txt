@@ -1,0 +1,3 @@
+germansentiment
+fastapi
+uvicorn
