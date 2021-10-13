@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
-from service import SentimentService
-from app_service import get_sentiment_service
+from german_sentiment_service.service import SentimentService
+from german_sentiment_service.app_service import get_sentiment_service
 
 api_router = APIRouter()
 

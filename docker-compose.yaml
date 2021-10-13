@@ -2,10 +2,18 @@ services:
   german-sentiment-service:
     build: .
     image: "german-sentiment-service-local"
-    command: uvicorn app:app --reload --host 0.0.0.0 --port 8000
+    command: uvicorn german_sentiment_service.app:app --reload --host 0.0.0.0 --port 8000
     ports:
       - 8001:8000
     volumes:
-      - "./german_sentiment_service:/app"
+      - ".:/app"
+  german-sentiment-service-test:
+    build: .
+    image: "german-sentiment-service-local"
+    command: pytest tests
+    ports:
+      - 8001:8000
+    volumes:
+      - ".:/app"
 
 
