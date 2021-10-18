@@ -12,7 +12,7 @@ services:
     image: "german-sentiment-service-local"
     command: pytest tests
     ports:
-      - 8001:8000
+      - 8002:8000
     volumes:
       - ".:/app"
 
